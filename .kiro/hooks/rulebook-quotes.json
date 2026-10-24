@@ -1,0 +1,11 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "check-rulebook-quotes",
+      "trigger": "PostFileSave",
+      "matcher": "packs/.*/rules\\.json$",
+      "action": { "type": "command", "command": "python scripts/check_rulebook_quotes.py" }
+    }
+  ]
+}

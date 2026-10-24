@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "gap-codes-in-every-pack",
+      "trigger": "PostFileSave",
+      "matcher": "packs/.*/pack\\.json$",
+      "action": {
+        "type": "agent",
+        "prompt": "A pack.json changed. Check that every gap code exists in every pack's gap_codes with ask, fix, member_text in all 6 languages, and optional requests. List any pack missing a code."
+      }
+    }
+  ]
+}

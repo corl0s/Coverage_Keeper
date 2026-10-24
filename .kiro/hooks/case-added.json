@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "case-added",
+      "trigger": "PostFileSave",
+      "matcher": "data/cases/.*\\.json$",
+      "action": {
+        "type": "agent",
+        "prompt": "A case file changed. Check it has labels (correct_pathways, evidence_sufficient, gaps using pack gap codes) and uses synthetic data only. Then run python data/render_documents.py, python scripts/smoke.py and python scripts/smoke_pdf.py, and report the pass counts."
+      }
+    }
+  ]
+}

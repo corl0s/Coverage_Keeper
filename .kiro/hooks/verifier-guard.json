@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "verifier-guard",
+      "trigger": "PostFileSave",
+      "matcher": "keeper/stages/verify\\.py$",
+      "action": {
+        "type": "agent",
+        "prompt": "verify.py was just edited. Confirm the DECISION regex still strips 'is eligible', 'is exempt', 'approved' and 'guaranteed', and that the quote, rule, number and entailment checks are intact. If anything was weakened, say so and propose a fix."
+      }
+    }
+  ]
+}

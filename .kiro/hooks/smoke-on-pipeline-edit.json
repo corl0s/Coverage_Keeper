@@ -1,0 +1,11 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "smoke-stages",
+      "trigger": "PostFileSave",
+      "matcher": "keeper/.*\\.py$",
+      "action": { "type": "command", "command": "python scripts/smoke.py" }
+    }
+  ]
+}

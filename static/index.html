@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coverage Keeper</title>
+<link rel="stylesheet" href="/static/fonts/fonts.css">
+<link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+<a class="skip" href="#view">Skip to content</a>
+<div class="shell">
+  <aside class="side">
+    <a class="brand" href="#/">
+      <svg class="brand-mark" viewBox="0 0 32 24" aria-hidden="true"><rect x="1" y="1" width="30" height="22" rx="2"/><path d="M1 3 16 14 31 3"/></svg>
+      <span>Coverage Keeper</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#/" data-nav="today">Today</a>
+      <a href="#/members" data-nav="members">Members</a>
+      <a href="#/case/C46" data-nav="case">Cases</a>
+      <a href="#/policies" data-nav="policies">Policy packs</a>
+      <a href="#/safeguards" data-nav="safeguards">Safeguards</a>
+    </nav>
+    <div class="side-foot">
+      <p><strong>Decision support only.</strong> The agency decides eligibility, and a coordinator confirms before anything is sent.</p>
+      <p>All members and documents are synthetic.</p>
+      <p id="engine-status" class="engine-status"></p>
+      <p><a href="/classic">Classic single-page view</a></p>
+    </div>
+  </aside>
+  <main id="view" tabindex="-1" class="view"><p class="loading">Loading…</p></main>
+</div>
+<script type="module" src="/static/js/main.js"></script>
+</body>
+</html>
